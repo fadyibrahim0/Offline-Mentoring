@@ -1,12 +1,12 @@
 <?php
 
 include_once '../inc/header.php'; 
-include_once '../inc/connect.php';
-include_once '../inc/session.php';
+include_once '../core/connect.php';
+include_once '../core/session.php';
 
-$sql    = "SELECT * FROM `categories`";
-$result = mysqli_query($conn, $sql);
-$categories = mysqli_fetch_all($result, MYSQLI_ASSOC);
+$sql            = "SELECT * FROM `categories`";
+$result         = mysqli_query($conn, $sql);
+$categories     = mysqli_fetch_all($result, MYSQLI_ASSOC);
 ?>
 
     <div class="container">
@@ -18,6 +18,9 @@ $categories = mysqli_fetch_all($result, MYSQLI_ASSOC);
         <!-- Displaying Error or Success Messages -->
         <?php include_once "../inc/messages.php"; ?>
 
+        <?php 
+        if(mysqli_num_rows($result) >= 1){
+        ?>
         <!-- Start Categories Table -->
         <table class="table">
             <thead>
@@ -39,7 +42,7 @@ $categories = mysqli_fetch_all($result, MYSQLI_ASSOC);
                     <td><?= $category['description'] ?></td>
                     <td>
                         <a class="mx-2 text-light" href="edit.php?id=<?=$category['id'];?>">
-                            <button class="btn btn-info">Edit</button>
+                            <button class="btn btn-info text-light">Edit</button>
                         </a>
                         <a href="../handlers/categories/delete.php?id=<?=$category['id'];?>">
                             <button class="btn btn-danger">Delete</button>
@@ -51,6 +54,12 @@ $categories = mysqli_fetch_all($result, MYSQLI_ASSOC);
                 ?>
             </tbody>
         </table>
+        <?php
+        } else {
+            echo "<h2>There's No Categories To Show</h2>";
+        }
+        ?>
+        
     </div>
     <!-- End Categories Table -->
 

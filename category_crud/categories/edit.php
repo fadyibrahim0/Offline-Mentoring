@@ -1,8 +1,8 @@
 <?php
 
 include_once '../inc/header.php'; 
-include_once '../inc/connect.php';
-include_once '../inc/session.php';
+include_once '../core/connect.php';
+include_once '../core/session.php';
 
 if(isset($_GET['id'])) {
     $id = $_GET['id'];

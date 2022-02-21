@@ -1,6 +1,6 @@
 <?php 
 include_once '../inc/header.php';
-include_once '../inc/session.php';
+include_once '../core/session.php';
 ?>
 
 <div class="container">
