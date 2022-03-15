@@ -11,6 +11,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="../categories/index.php">Categories</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../products/index.php">Products</a>
+                    </li>
                 </ul>
             </div>
         </div>

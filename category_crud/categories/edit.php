@@ -5,10 +5,10 @@ include_once '../core/connect.php';
 include_once '../core/session.php';
 
 if(isset($_GET['id'])) {
-    $id = $_GET['id'];
-    $sql    = "SELECT * FROM `categories` WHERE `id`='$id'";
-    $result = mysqli_query($conn, $sql);
-    $category = mysqli_fetch_assoc($result);
+    $id         = $_GET['id'];
+    $sql        = "SELECT * FROM `categories` WHERE `id`='$id'";
+    $result     = mysqli_query($conn, $sql);
+    $category   = mysqli_fetch_assoc($result);
 }
 
 ?>

@@ -5,9 +5,10 @@ include_once "sql.php";
 $host = "localhost";
 $user = "root";
 $password = "";
-$database = "demo";
+$database = "202_crud_category";
 
-// createDB($host, $user, $password, $database);
+// Automatically Create Our Database If Not Exist
+createDB($host, $user, $password, $database);
 
 $conn = mysqli_connect($host, $user, $password, $database);
 

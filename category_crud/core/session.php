@@ -3,11 +3,11 @@
 session_start();
 
 /**
- * Declare A Session With Specified Value
+ * Declare A Session With A Specified Value
  *
  * @param String $name
  * @param Mixed $val
- * @return void
+ * @return bool
  */
 function setSession($name, $val){
     $_SESSION[$name] = $val;
