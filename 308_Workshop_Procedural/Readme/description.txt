@@ -1,0 +1,26 @@
+1 - login 
+    email , password 
+2 - index 
+    stats -> number of products , number of users , number of orders 
+3 - crud 
+    category
+    show all products according to category 
+4 - crud 
+    products 
+    show name of category when you display products
+5 - crud 
+    users 
+6 - orders 
+    crud for orders 
+    show name of product 
+    show name of admin
+
+7 - notes 
+    avoid sql injection 
+    avoid csrf attack 
+    avoid url jumping attack 
+    validations 
+    customize validations according to query or general error
+    do not forget user types ( admin , super admin )
+    super admin can delete admin , other side not 
+
