@@ -1,0 +1,12 @@
+# Enable modifying mode
+RewriteEngine on
+
+# If the directory in the browser doesn't exist
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# If the file with specified name in the browser doesn't exist
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# proceed to this rewrite rule which means:
+# redirect any request to a non-existing page or directory to index.php file (or any index file)
+RewriteRule . index.php [L]
