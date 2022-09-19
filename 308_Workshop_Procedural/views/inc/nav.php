@@ -1,7 +1,21 @@
 <?php 
+$rootDirName =  basename(dirname(dirname(__DIR__)));
+
+$explodes = explode("/", $_SERVER['REQUEST_URI']);
+
+// start generating final path in this situation  = /eraasoft/groups/group308/workshop/
+$projPath = "";
+$i = 1;
+foreach($explodes as $item) {
+    if($item == $rootDirName) {
+        $projPath .= "$item/";
+        break;
+    } 
+    $projPath .= "$item/";
+    $i++;
+}
 
 // Nav URL
-$projPath   = "/group308/workshop/";
 define("N_URL", "http://" . $_SERVER['SERVER_NAME'] . ":" . $_SERVER['SERVER_PORT'] . $projPath );
 
 $currentURL = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
@@ -69,3 +83,5 @@ if (session_status() === PHP_SESSION_NONE) {
             </div>
         </div>
     </nav>
+
+<?php

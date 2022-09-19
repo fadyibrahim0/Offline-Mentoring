@@ -22,7 +22,7 @@ if(isset($_POST['submit']) && $_SERVER['REQUEST_METHOD'] == "POST") {
     // Check If This Product Exist Or Not
     if(mysqli_num_rows($result) >= 1){
         $product    = mysqli_fetch_assoc($result);
-        $img    = $product['img'];
+        $img        = $product['img'];
 
         $imgName    = $_FILES['img']['name'];
         $imgSize    = $_FILES['img']['size'];
