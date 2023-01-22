@@ -6,5 +6,6 @@
     session_start();
     $_SESSION = array();
     session_destroy();
+    session_unset();
     redirect(URL . "login.php");
     exit;

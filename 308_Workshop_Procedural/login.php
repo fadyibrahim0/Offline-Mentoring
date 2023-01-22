@@ -38,15 +38,15 @@ if(isset($_SESSION['logged'])) {
         ?>
 
         <form class="col-md-8 my-3 m-auto" method="POST" action="handlers/login.php">
-            <div class="mb-3">
+            <div class="mb-3 form-group">
                 <label for="email" class="form-label">Email address</label>
                 <input type="email" name="email" class="form-control" id="email">
             </div>
-            <div class="mb-3">
+            <div class="mb-3 form-group">
                 <label for="password" class="form-label">Password</label>
                 <input type="password" name="password" class="form-control" id="password">
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">Login</button>
         </form>
     </div>
 </div>
